@@ -33,6 +33,18 @@ export default function RootLayout() {
       <GestureHandlerRootView>
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          {/* Approach 1: 'stackSheet' screen */}
+          <Stack.Screen
+            name="stackSheet"
+            options={{ 
+              headerShown: false,
+              // 'animation' is disabled here since the bottom sheet already has its own animation.
+              animation: "none",
+              // This is important so that the bottom sheet is displayed
+              // with a transparent background (Not as a separate route).
+              presentation: "transparentModal"
+            }}
+          />
           <Stack.Screen name="+not-found" />
         </Stack>
         <StatusBar style="auto" />
