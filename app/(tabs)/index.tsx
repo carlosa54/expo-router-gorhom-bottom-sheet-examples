@@ -1,4 +1,5 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
+import { Link } from 'expo-router';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -27,6 +28,11 @@ export default function HomeScreen() {
         <ThemedText>
           One bottom sheet containing nested Expo Router routes
         </ThemedText>
+        <ThemedView style={styles.bottomSheetLinkContainer}>
+          <Link href="/stackSheet">
+            <ThemedText type="link">Open bottom sheet with Stack</ThemedText>
+          </Link>
+        </ThemedView>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Approach #2: Bottom Sheet Routes</ThemedText>
@@ -54,5 +60,8 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     position: 'absolute',
+  },
+  bottomSheetLinkContainer: {
+    alignItems: "center",
   },
 });
