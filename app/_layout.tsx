@@ -45,6 +45,18 @@ export default function RootLayout() {
               presentation: "transparentModal"
             }}
           />
+          {/**
+           * Approach 2: 'bottomSheet' screen.
+           * Any screen inside the 'bottomSheet' will be displayed within a bottom sheet. 
+           */}
+          <Stack.Screen
+            name="bottomSheet"
+            options={{ 
+              headerShown: false,
+              animation: "none",
+              presentation: "transparentModal",
+            }}
+          />
           <Stack.Screen name="+not-found" />
         </Stack>
         <StatusBar style="auto" />

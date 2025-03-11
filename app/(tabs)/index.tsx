@@ -39,6 +39,14 @@ export default function HomeScreen() {
         <ThemedText>
         Each route triggers its own individual bottom sheet
         </ThemedText>
+        <ThemedView style={styles.bottomSheetLinkContainer}>
+          <Link href="/bottomSheet/route1">
+            <ThemedText type="link">Open bottom sheet Route 1</ThemedText>
+          </Link>
+          <Link href="/bottomSheet/route2">
+            <ThemedText type="link">Open bottom sheet Route 2</ThemedText>
+          </Link>
+        </ThemedView>
       </ThemedView>
     </ParallaxScrollView>
   );
@@ -62,6 +70,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   bottomSheetLinkContainer: {
+    gap: 5,
     alignItems: "center",
   },
 });
